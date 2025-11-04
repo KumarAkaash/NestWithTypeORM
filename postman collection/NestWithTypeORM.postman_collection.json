@@ -1,0 +1,120 @@
+{
+	"info": {
+		"_postman_id": "b23ee8fe-27b3-4ce9-84bb-ff2c353583e2",
+		"name": "NestWithTypeORM",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25828142"
+	},
+	"item": [
+		{
+			"name": "Add Product",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"name\":\"Makhana Premium\",\"price\":120.5,\"quantity\":50}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"products"
+					]
+				},
+				"description": "Generated from cURL: curl -X POST http://localhost:3000/products \\\r\n  -H \"Content-Type: application/json\" \\\r\n  -d '{\"name\":\"Makhana Premium\",\"price\":120.5,\"quantity\":50}'\r\n"
+			},
+			"response": []
+		},
+		{
+			"name": "GetAllProduct",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"products"
+					]
+				},
+				"description": "Generated from cURL: curl http://localhost:3000/products\r\n"
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateProduct",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"price\":130, \"quantity\":45}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/products/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"products",
+						"1"
+					]
+				},
+				"description": "Generated from cURL: curl -X PATCH http://localhost:3000/products/1 \\\r\n  -H \"Content-Type: application/json\" \\\r\n  -d '{\"price\":130, \"quantity\":45}'\r\n"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/products/1",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/products/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"products",
+						"1"
+					]
+				},
+				"description": "Generated from cURL: curl -X DELETE http://localhost:3000/products/1\r\n"
+			},
+			"response": []
+		}
+	]
+}
